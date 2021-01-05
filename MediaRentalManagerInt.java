@@ -4,19 +4,10 @@ import java.util.ArrayList;
 
 /**
  * Interface that defines the functionality expected from
- * the media rental manager.  The two possible media we can have
- * are movies and music albums.  A movie has a title, a number of copies
+ * the media rental manager.  The two possible media 
+ * are movies and albums. A movie has a title, a number of copies
  * that are available for rent, and a rating (e.g., "PG"). An album
- * has a title, a number of copies, an artist, and a list of songs (String
- * with title of songs separated by commas).<br>
- * <br>
- * <b>IMPORTANT:</b>The database of the media rental manager, must define and use two
- * ArrayList.  One stores the media (both Movies and Album information)
- * and one stores Customer information.  You will lose significant credit
- * if you do not define and use these ArrayList objects.
- * 
- * @author cmsc131
- *
+ * has a title, a number of copies, an artist, and a list of songs.
  */
 public interface MediaRentalManagerInt {
 	
@@ -30,8 +21,6 @@ public interface MediaRentalManagerInt {
 	 * @param plan 
 	 */
 	public void addCustomer(String name, String address, String plan);
-	
-	
 	/**
 	 * Adds the specified movie to the database.  The possible values for rating are
 	 * "PG", "R", "NR".
@@ -125,8 +114,6 @@ public interface MediaRentalManagerInt {
 	 * @return
 	 */
 	public boolean returnMedia(String customerName, String mediaTitle);
-	
-	
 	/**
 	 * Returns a SORTED ArrayList with media titles that satisfy the provided parameter values.
 	 * If null is specified for a parameter, then that parameter should be ignore in the
